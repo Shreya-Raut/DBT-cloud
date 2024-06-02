@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: tableau
+    database: trainline_data
+    schema: tableau # Not needed since it matches the source name
+    tables:
+      - name: customer_growth_accounting
+
+  - name: calender
+    database: trainline_data
+    schema: bi_dwh_ref_data
+    tables:
+      - name: bi_d_calendar
+
+  - name: reporting
+    database: lakehouse_dev
+    schema: reporting
+    tables:
+      - name: business_health_demo
+
+  - name: bi_dwh  # Name for this source definition
+    database: trainline_data
+    schema: bi_dwh
+    tables:
+      - name: fm_products
+      - name: marketing_mart

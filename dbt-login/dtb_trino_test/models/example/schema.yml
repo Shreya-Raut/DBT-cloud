@@ -1,0 +1,10 @@
+
+version: 2
+
+models:
+  - name: customer
+    description: "A customer data"
+    schema: parquet
+    columns:
+      - name: metric_name
+        description: "The metric name for this table"

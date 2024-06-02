@@ -1,0 +1,12 @@
+dtb_trino_test:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: oauth
+      user: "shreya.raut@thetrainline.com/data_engineers_experimentation"
+      database: trainline_data
+      host: "https://turing-interactive-cluster-free-tier.trino.galaxy.starburst.io"
+      port: 443
+      schema: "stg_bi_dm_exp"
+      threads: 1
