@@ -1,10 +1,11 @@
-dtb_trino_test:
-  target: dev
+DBT_trino:
+  target: PROD
   outputs:
     dev:
       type: trino
       method: oauth
-      user: "shreya.raut@thetrainline.com/data_engineers_experimentation"
+      user: dbt_poc@turing.galaxy.starburst.io/data_engineers_experimentation
+      password: GXY$u14rIdhoxCZ6HGxiTpyvTNnFjCCa82QkhuVRejY1ajOeGOzyGCevqQQS
       database: trainline_data
       host: "https://turing-interactive-cluster-free-tier.trino.galaxy.starburst.io"
       port: 443
