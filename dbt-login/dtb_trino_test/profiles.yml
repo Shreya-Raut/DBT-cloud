@@ -1,4 +1,4 @@
-DBT_trino:
+DBT_trino_conn:
   target: PROD
   outputs:
     dev:
