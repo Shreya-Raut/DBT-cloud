@@ -1,13 +1,11 @@
-DBT_trino_conn:
-  target: dev
-  outputs:
-    dev:
-      type: trino
-      method: oauth
-      user: dbt_poc@turing.galaxy.starburst.io/data_engineers_experimentation
-      password: GXY$u14rIdhoxCZ6HGxiTpyvTNnFjCCa82QkhuVRejY1ajOeGOzyGCevqQQS
-      database: trainline_data
-      host: "https://turing-interactive-cluster-free-tier.trino.galaxy.starburst.io"
-      port: 443
-      schema: "stg_bi_dm_exp"
-      threads: 1
+outputs:
+  prod:
+    type: trino
+    method: oauth
+    user: dbt_poc@turing.galaxy.starburst.io/data_engineers_experimentation
+    password: GXY$u14rIdhoxCZ6HGxiTpyvTNnFjCCa82QkhuVRejY1ajOeGOzyGCevqQQS
+    database: trainline_data
+    host: "https://turing-interactive-cluster-free-tier.trino.galaxy.starburst.io"
+    port: 443
+    schema: "stg_bi_dm_exp"
+    threads: 1
