@@ -27,7 +27,6 @@ WHERE
     {% if is_incremental()  %}
     AND DATE(cal.report_week_commencing) > DATE((select max(year_month_day) from {{this}}))
     {% endif %}-- active_customers
->>>>>>> eff0757024226fae5bd48518ee0b066e5b9f6ce0
     -- AND person_status IN ('New') -- new_customers
     -- AND person_status IN ('Resurrected') -- resurrected_customers
     -- AND person_status IN ('Retained') -- retained_customers
