@@ -23,7 +23,7 @@ WHERE
     AND SPLIT(managed_group_id, ' ')[1] IN ('20', '42')
     AND person_status IN ('New', 'Resurrected', 'Retained')
     {% if is_incremental()  %}
-    AND DATE(cal.report_week_commencing) > (select max(year_month_day) from {{this}})
+    AND DATE(cal.report_week_commencing) > DATE((select max(year_month_day) from {{this}}))
     {% endif %}-- active_customers
     -- AND person_status IN ('New') -- new_customers
     -- AND person_status IN ('Resurrected') -- resurrected_customers
